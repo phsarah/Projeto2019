@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FaceControl : MonoBehaviour
+public class FeetControl : MonoBehaviour
 {
 
     public GameObject player;
@@ -17,15 +17,14 @@ public class FaceControl : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Platforms")) {
-            script.encostado = true;
+            script.peApoiado = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Platforms")) {
-            script.encostado = false;
+            script.peApoiado = false;
         }
     }
-
 }
